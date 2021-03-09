@@ -1,2 +1,8 @@
-<app-colecao></app-colecao> <br />
-<app-colecao></app-colecao>
+<div class="container">
+	<app-curso-adicionar (cursoAdicionado)="adicionar ($event)"></app-curso-adicionar>
+	<div class="row">
+		<div *ngFor="let curso of cursos" class= "col-5">
+			<app-curso-lista [curso]="curso"></app-curso-lista>
+		</div>
+	</div>
+</div>

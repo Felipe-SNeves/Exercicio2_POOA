@@ -5,6 +5,21 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'cursos-divulgacao';
+
+	cursos = [
+		{
+			nome: "Compiladores",
+			cargaHoraria: 40
+		},
+		{
+			nome: "Algoritmos",
+			cargaHoraria: 60
+		}
+	];
+
+	adicionar (curso) {
+		this.cursos = [curso, ...this.cursos];
+	} 
 }
